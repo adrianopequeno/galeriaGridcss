@@ -1,0 +1,155 @@
+/*.pai {
+  background: #200A3F;
+  display: grid;
+  grid-template-rows: 1fr 2fr 3fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 
+    "filho1 filho1 filho1 filho1"
+    "filho2 filho2 filho3 filho3"
+    "filho2 filho2 filho3 filho3"
+    "filho4 filho4 filho4 filho4"
+  ;
+
+  gap: 2px 1px;
+}
+
+.filho {
+  background: #D838F4;
+  margin: 5px;
+  color: #200A3F;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.filho-1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.filho-2 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 4;
+}
+
+.filho-3 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.filho-4 {
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
+
+.filho-1 {
+  grid-area: filho1;
+}
+
+.filho-2 {
+  grid-area: filho2;
+}
+
+.filho-3 {
+  grid-area: filho3;
+}
+
+.filho-4 {
+  grid-area: filho4;
+}*/
+
+/* Galeria de Fotos CSS Grid */
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background: #FFCCFC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pai {
+  background: #200A3F;
+  width: 60%;
+  height: 80vh;
+  display: grid;
+
+  gap: 10px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  /* possicionamento de cada filho em linhas e colunas. 4x4 */
+  grid-template-areas:
+    "filho1 filho2 filho2 filho3"
+    "filho1 filho4 filho4 filho4"
+    "filho5 filho6 filho7 filho7"
+    "filho8 filho6 filho9 filho9"
+  ;
+}
+
+.filho {
+  background: #D838F4;
+}
+
+.filho-1 {
+  grid-area: filho1;
+  background-image: url("../../images/filho1.jpg");
+}
+.filho-2 {
+  grid-area: filho2;
+  background-image: url("../../images/filho2.jpg");
+}
+.filho-3 {
+  grid-area: filho3;
+  background-image: url("../../images/filho1.jpg");
+}
+.filho-4 {
+  grid-area: filho4;
+  background-image: url("../../images/filho2.jpg");
+}
+.filho-5 {
+  grid-area: filho5;
+  background-image: url("../../images/filho1.jpg");
+}
+.filho-6 {
+  grid-area: filho6;
+  background-image: url("../../images/filho3.jpg");
+}
+.filho-7 {
+  grid-area: filho7;
+  background-image: url("../../images/filho2.jpg");
+}
+.filho-8 {
+  grid-area: filho8;
+  background-image: url("../../images/filho3.jpg");
+}
+.filho-9 {
+  grid-area: filho9;
+  background-image: url("../../images/filho2.jpg");
+}
+
+.filho-1 { background-position: left bottom; }
+
+.filho-6 {
+  background-position: center;
+  background-size: cover;
+}
+
+.filho-1, .filho-2, .filho-3,
+.filho-4, .filho-5, .filho-7,
+.filho-8, .filho-9 {
+  background-size: cover;
+  background-position: center;
+  transition: linear 0.2s;
+}
